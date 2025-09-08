@@ -1,11 +1,10 @@
-package org.example.jmh;
+package counting.cards.jmh;
 
-import org.example.GreetingGenerator;
-import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.infra.Blackhole;
-import org.openjdk.jmh.annotations.Warmup;
-
+import counting.cards.GreetingGenerator;
 import java.util.concurrent.TimeUnit;
+import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.annotations.Warmup;
+import org.openjdk.jmh.infra.Blackhole;
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
@@ -13,11 +12,12 @@ import java.util.concurrent.TimeUnit;
 @Fork(value = 1, warmups = 2)
 @Warmup(iterations = 2)
 public class SampleBenchmark {
+
   @Benchmark
   @Timeout(time = 5, timeUnit = TimeUnit.SECONDS)
   public void sayHelloBenchmark(Blackhole bh) {
-      GreetingGenerator generator = new GreetingGenerator();
-      String output = generator.sayHello();
-      bh.consume(output);
+    GreetingGenerator generator = new GreetingGenerator();
+    String output = generator.sayHello();
+    bh.consume(output);
   }
 }

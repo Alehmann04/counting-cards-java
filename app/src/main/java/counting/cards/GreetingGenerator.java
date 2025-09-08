@@ -1,6 +1,7 @@
-package org.example;
+package counting.cards;
 
 public class GreetingGenerator {
+
   // This is just an example class to demonstrate how everything works
   // You should delete this file when you implement your own solution
 
