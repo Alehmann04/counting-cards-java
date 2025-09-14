@@ -24,7 +24,7 @@ public class BetterShuffler {
     return output;
   }
 
-  public int[] BetterShuffle(int[] deck) {
+  public int[] Shuffle(int[] deck) {
     int[] shuffle = new int[deck.length];
     int n = deck.length;
     while (n > 0) {
