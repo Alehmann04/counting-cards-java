@@ -21,8 +21,7 @@ public class ShufflerBenchmark {
   DeckMaker deck_maker = new DeckMaker();
   int[] deck;
 
-  //@Param({ "10", "20", "30", "52", "90", "100", "200", "500", "1000" })
-  @Param({ "0" })
+  @Param({ "10", "20", "30", "52", "90", "100", "200", "500", "1000" })
   int deck_length;
 
   @Setup
